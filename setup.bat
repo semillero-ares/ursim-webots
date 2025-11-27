@@ -10,4 +10,5 @@ if errorlevel 1 (
 docker network inspect dockernet
 
 REM Docker compose up
-docker-compose up -d --compose-file ursim/compose.yml
+cd ursim
+docker-compose up -d
