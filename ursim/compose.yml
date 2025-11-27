@@ -1,0 +1,31 @@
+#
+# Use this docker-compose file to run URSim in a Docker container.
+# Make sure to create the 'dockernet' network beforehand with the following command:
+# docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
+#
+# Check host IP address in the 'dockernet' network using:
+# docker network inspect dockernet
+# or
+# route | awk '/^default/ { print $2 }'
+name: ursim
+services:
+  ursim:
+    container_name: ursim
+    image: universalrobots/ursim_e-series:latest
+    networks:
+      - dockernet
+    ports:
+      - 5900:5900 # VNC port: 5900
+      - 6080:6080 # Web browser VNC port: 6080
+      - 29999:29999 # Dashboard port: 29999
+      - 30001-30004:30001-30004 # Real-time client ports: 30001-30004
+    stdin_open: true
+    tty: true
+    environment:
+      - ROBOT_MODEL=UR5e
+    volumes:
+      - ./programs:/ursim/programs
+
+networks:
+  dockernet:
+    external: true
