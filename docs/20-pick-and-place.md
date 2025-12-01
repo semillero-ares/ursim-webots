@@ -28,3 +28,7 @@ Las entradas y salidas esta configuradas ya en el archivo de instalación `pickA
 
 \* puede ser controlada en voltaje 0-10V o en corriente 0-4mA.
 
+## Ejemplo de uso
+
+<p><iframe class="img-center" width="300x" height="533px" src="https://www.youtube.com/embed/-zafwiPye6Q " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
