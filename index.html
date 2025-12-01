@@ -44,7 +44,7 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Tutorial de URSIM con Webots</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#configurando-el">Configurando el</a>
+    <li class="toctree-l2"><a class="reference internal" href="#empecemos">Empecemos</a>
     </li>
     </ul>
                 </li>
@@ -54,7 +54,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="20-pick-and-place/">Reto de Pick and Place</a>
+                <li class="toctree-l1"><a class="reference internal" href="20-pick-and-place/">Entorno: Pick and Place</a>
                 </li>
               </ul>
               <ul>
@@ -110,12 +110,26 @@
 <p><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a>, este motor nos permite instalar y correr fácilmente URSIM. </p>
 </li>
 </ol>
-<p><img alt="git logo" class="logo img-center" src="img/logo/git.svg" />
-<img alt="python logo" class="logo img-center" src="img/logo/python.svg" />
-<img alt="webots logo" class="logo img-center" src="img/logo/webots.png" />
-<img alt="docker desktop logo" class="logo img-center" src="img/logo/docker-desktop.svg" /></p>
-<h2 id="configurando-el">Configurando el</h2>
-<p>Después de tener todos los programas anterior instalados, podremos empezar a usar URSIM con Webots. </p>
+<p><img alt="git logo" class="logo img-center" src="img/logo/git.svg" title="Logo de Git" />
+<img alt="python logo" class="logo img-center" src="img/logo/python.svg" title="Logo de Python" />
+<img alt="webots logo" class="logo img-center" src="img/logo/webots.png" title="Logo de Webots" />
+<img alt="docker desktop logo" class="logo img-center" src="img/logo/docker-desktop.svg" title="Logo de Docker Desktop" /></p>
+<h2 id="empecemos">Empecemos</h2>
+<p>Después de tener todos los programas anterior instalados, podremos empezar a usar URSIM con Webots. Lo primero que deberemos hacer será clonar el repositorio usando este comando en un terminal, pero antes de eso crearemos una carpeta en el PC donde queramos que los archivos estén. En nuestro caso usaremos <code>C:\ursim-webots</code> como ilustración.</p>
+<p>Estando en la carpeta vamos a abrir un terminal. Hacemos clic derecho en el espacio vacío en la carpeta y en el menú desplegable escogemos <code>Abrir en Terminal</code>.</p>
+<p><img alt="Abrir en Terminal" class="img-center" src="img/windows/abrir-terminal.png" title="Abrir en Terminal" /></p>
+<p>Estando en el terminal vamos a ejecutar el siguiente comando:</p>
+<pre><code>git clone https://github.com/semillero-ares/ursim-webots.git .
+</code></pre>
+<p>Después de ejecutar el comando la carpeta debera tener alguno archivos, entre ellos uno llamado <code>setup.bat</code>. En el terminal vamos a ejecutar este archivo:</p>
+<pre><code>.\setup.bat
+</code></pre>
+<p>Si todo salió bien, deberemos tener un mensaje similar a este:</p>
+<pre><code>[+] Running 1/1
+ ✔ Container ursim Started
+Presione una tecla para continuar . . .
+</code></pre>
+<p>Y podremos acceder a URSIM a traves del navegador en este enlace <a href="http://localhost:6080/vnc.html"><code>http://localhost:6080/vnc.html</code></a>. Si hubo algún problema revisar la sección de solución de <a href="60-problemas-comunes/">problemas comunes</a>.</p>
               
             </div>
           </div><footer>
@@ -127,6 +141,7 @@
 
   <div role="contentinfo">
     <!-- Copyright etc -->
+      <p>© 2025, Davinson Castaño Cano para el Semillero ARES</p>
   </div>
 
   Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando un <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
@@ -168,5 +183,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-12-01 15:22:54.484846+00:00
+Build Date UTC : 2025-12-01 16:03:22.686005+00:00
 -->
