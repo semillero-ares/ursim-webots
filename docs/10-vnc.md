@@ -9,7 +9,7 @@ Podemos acceder a URSIM desde la interfaz web [`http://localhost:6080/vnc.html`]
 
 La versión en iOS permite la interacción con el URSIM usando las capacidades _touch_ del iPhone o del iPad. La versión de Android está limitada a interacción tipo _mouse_. 
 
-Para conectarnos con el URSIM necesitaremos tener conectados en la misma red wifi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas `window`+`R` o `🪟`+`R` .
+Para conectarnos con el URSIM necesitaremos tener conectados en la misma red WiFi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas `window`+`R` o `🪟`+`R` .
 
 ![Ventana ejecutar](img/windows/ejecutar.png){: class="img-center"}
 
@@ -28,6 +28,8 @@ Adaptador de LAN inalámbrica Wi-Fi:
    Máscara de subred . . . . . . . . . . . . : 255.255.255.0
    Puerta de enlace predeterminada . . . . . : 10.10.54.1
 ```
+
+**IMPORTANTE:** En cada conexión a la red WiFi, **la dirección IP va a cambiar**. 
 
 En el ejemplo anterior buscaremos el adaptador de `LAN inalámbrica Wi-Fi` y de ahí tomaremos el valor de la `Dirección IPv4` es este caso `192.168.1.20`. Estos 4 números separados por punto los necesitaremos para la conexión del dispositivo con RealVNC al URSIM. 
 

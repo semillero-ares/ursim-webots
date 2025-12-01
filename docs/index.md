@@ -33,9 +33,13 @@ git clone https://github.com/semillero-ares/ursim-webots.git .
 
 Después de ejecutar el comando la carpeta debera tener alguno archivos, entre ellos uno llamado `setup.bat`. En el terminal vamos a ejecutar este archivo:
 
+**IMPORTANTE:** Tener abierto el Docker Desktop, para que se haga el setup correctamente. 
+
 ```
 .\setup.bat
 ```
+
+También se puede ejecutar el setup, haciendo doble clic en el archivo `setup.bat` directamente. 
 
 Si todo salió bien, deberemos tener un mensaje similar a este:
 
