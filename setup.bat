@@ -1,4 +1,6 @@
-REM Ensure Python is installed
+@echo off
+REM Setup script for the project
+REM Update pip and install required packages
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
@@ -11,3 +13,6 @@ docker network inspect dockernet
 
 REM Docker compose up
 docker-compose up -d --compose-file ursim/compose.yml
+
+REM Pause to view any messages
+pause

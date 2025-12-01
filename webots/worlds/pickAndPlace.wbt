@@ -1,15 +1,329 @@
 #VRML_SIM R2025a utf8
 
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/refs/heads/released/projects/devices/robotiq/protos/Robotiq2f85Gripper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Rubber.proto"
 
 WorldInfo {
+  basicTimeStep 5
+  contactProperties [
+    ContactProperties {
+      material1 "ROBOTIQ gripper pad"
+      coulombFriction [
+        10
+      ]
+      rollingFriction 0.1 0.1 0.1
+    }
+  ]
 }
 Viewpoint {
-  orientation -0.5773502691896257 0.5773502691896257 0.5773502691896257 2.0944
-  position 0 0 10
+  orientation -0.2513591635175337 -0.10027885209737887 0.9626851628324797 3.8749835032612054
+  position 1.6194681234252593 1.7613280196964474 2.1280703567642325
 }
-TexturedBackground {
+DirectionalLight {
+  direction 0 -1 0
 }
-TexturedBackgroundLight {
+Background {
+  skyColor [
+    0.666667 0.666667 0.498039
+  ]
+}
+DEF SimFrame Robot {
+  children [
+    DEF Floor Floor {
+      translation 0.7 0.5 0
+      size 4 5
+      tileSize 0.2 0.2
+      appearance PBRAppearance {
+        baseColor 0.0784314 0.0784314 0.117647
+        roughness 1
+        metalness 0
+      }
+    }
+    DEF Objets Pose {
+      translation 0 0 0.35
+      children [
+        DEF PIECE Shape {
+          appearance DEF ColorBlue PBRAppearance {
+            baseColor 0.0901961 0.368627 0.678431
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.06 0.06 0.12
+          }
+        }
+        DEF BOX Shape {
+          appearance DEF ColorBlue PBRAppearance {
+            baseColor 0.490196 0.180392 0
+            roughness 1
+            metalness 0
+          }
+          geometry Mesh {
+            url [
+              "../meshes/box.stl"
+            ]
+          }
+        }
+      ]
+    }
+    DEF RobotUR5e UR5e {
+      translation 0 0 0.722
+      rotation 0 0 1 3.14159
+      controller "pickAndPlace-UR5e"
+      toolSlot [
+        Robotiq2f85Gripper {
+          rotation 1 0 0 -1.57079
+          name "gripper"
+        }
+      ]
+    }
+    DEF RobotStand Solid {
+      children [
+        DEF RobotStandGroup Group {
+          children [
+            Pose {
+              translation 0 0 0.35
+              children [
+                Shape {
+                  appearance DEF ColorBlue PBRAppearance {
+                    baseColor 0.0901961 0.368627 0.678431
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.51 0.5 0.7
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0 0 0.711
+              children [
+                Shape {
+                  appearance DEF ColorGray PBRAppearance {
+                    baseColor 0.4 0.443137 0.54902
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.18 0.18 0.022
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      boundingObject USE RobotStandGroup
+    }
+    DEF TrayStation Solid {
+      translation 0 0.55 0
+      children [
+        DEF TrayStationGroup Group {
+          children [
+            Pose {
+              translation 0 0 0.35
+              children [
+                Shape {
+                  appearance USE ColorBlue
+                  geometry Box {
+                    size 0.51 0.6 0.7
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0 0 0.7
+              rotation 0 0 1 1.57079
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.0509804 0.0509804 0.0509804
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Mesh {
+                    url [
+                      "../meshes/tray.stl"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      name "solid(1)"
+      boundingObject USE TrayStationGroup
+    }
+    Solid {
+      translation 1.45 0 0
+      rotation 0 0 1 3.14159
+      children [
+        Track {
+          translation -3.1675391420904475e-08 -3.263511782472047e-09 0.649997413951709
+          rotation 0.003415282640739852 0.9996681170915511 -0.02553412452222902 1.3197619592380702e-07
+          children [
+            Shape {
+              appearance Rubber {
+                type "dotted"
+                textureTransform TextureTransform {
+                  scale 8 1.72
+                  translation -0.09000000000000007 0
+                }
+              }
+              geometry DEF BELT_IN Box {
+                size 2 0.43 0.1
+              }
+            }
+          ]
+          boundingObject USE BELT_IN
+          physics Physics {
+            density -1
+            mass 1
+          }
+          device [
+            LinearMotor {
+              name "motor_infeed"
+              maxVelocity 0.5
+            }
+          ]
+          textureAnimation 0.25 0
+        }
+        DEF CONVEYOR_IN Group {
+          children [
+            Pose {
+              translation 0 -0.2315 0.375
+              children [
+                Shape {
+                  appearance USE ColorGray
+                  geometry Box {
+                    size 2.1 0.03 0.75
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0 0.2315 0.375
+              children [
+                Shape {
+                  appearance USE ColorGray
+                  geometry Box {
+                    size 2.1 0.03 0.75
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      name "infeed"
+    }
+    Solid {
+      translation -0.6 0.5 0
+      rotation 0 0 1 1.57079
+      children [
+        Track {
+          translation -3.1675391420904475e-08 -3.263511782472047e-09 0.649997413951709
+          rotation 0.003415282640739852 0.9996681170915511 -0.02553412452222902 1.3197619592380702e-07
+          children [
+            Shape {
+              appearance Rubber {
+                type "dotted"
+                textureTransform TextureTransform {
+                  scale 16 1.72
+                  translation -0.09000000000000007 0
+                }
+              }
+              geometry DEF BELT_OUT Box {
+                size 4 0.43 0.1
+              }
+            }
+          ]
+          name "track_out"
+          boundingObject USE BELT_OUT
+          physics Physics {
+            density -1
+            mass 1
+          }
+          device [
+            LinearMotor {
+              name "motor_outfeed"
+              maxVelocity 0.5
+            }
+          ]
+          textureAnimation 0.25 0
+        }
+        DEF CONVEYOR_OUT Group {
+          children [
+            Pose {
+              translation 0 -0.2315 0.375
+              children [
+                Shape {
+                  appearance USE ColorGray
+                  geometry Box {
+                    size 4.1 0.03 0.75
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0 0.2315 0.375
+              children [
+                Shape {
+                  appearance USE ColorGray
+                  geometry Box {
+                    size 4.1 0.03 0.75
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      name "outfeed"
+      boundingObject USE CONVEYOR_OUT
+    }
+    DistanceSensor {
+      translation 0.6 -0.23 0.72
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          appearance USE ColorBlue
+          geometry Box {
+            size 0.03 0.02 0.02
+          }
+        }
+      ]
+      name "laser_infeed"
+      lookupTable [
+        0 0 0
+        0.47 100 0
+      ]
+      type "laser"
+    }
+    DistanceSensor {
+      translation -0.83 -7.53618e-06 0.72
+      rotation 0 0 -1 -5.307179586466759e-06
+      children [
+        Shape {
+          appearance USE ColorBlue
+          geometry Box {
+            size 0.03 0.02 0.02
+          }
+        }
+      ]
+      name "laser_outfeed"
+      lookupTable [
+        0 0 0
+        0.47 100 0
+      ]
+      type "laser"
+    }
+  ]
+  name "simulator"
+  controller "pickAndPlace"
+  supervisor TRUE
 }
