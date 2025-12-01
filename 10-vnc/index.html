@@ -35,12 +35,12 @@
           <img src="../img/logo/ares.png" class="logo" alt="Logo"/>
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" title="Escriba el término de búsqueda aquí" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegación">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="..">Tutorial de URSIM con Webots</a>
                 </li>
@@ -72,7 +72,7 @@
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Menú de navegación en móvil">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="..">Tutorial de URSim con Webots</a>
         
@@ -80,10 +80,10 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Documentos"></a></li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
       <li class="breadcrumb-item active">Usando RVNC</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/semillero-ares/ursim-webots/edit/master/docs/10-vnc.md" class="icon icon-github"> Editar en GitHub</a>
+          <a href="https://github.com/semillero-ares/ursim-webots/edit/master/docs/10-vnc.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -99,7 +99,7 @@
 <li>Enlace para la App Store <a href="https://apps.apple.com/es/app/realvnc-viewer-remote-desktop/id352019548">aquí</a></li>
 </ul>
 <p>La versión en iOS permite la interacción con el URSIM usando las capacidades <em>touch</em> del iPhone o del iPad. La versión de Android está limitada a interacción tipo <em>mouse</em>. </p>
-<p>Para conectarnos con el URSIM necesitaremos tener conectados en la misma red wifi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas <code>window</code>+<code>R</code> o <code>🪟</code>+<code>R</code> .</p>
+<p>Para conectarnos con el URSIM necesitaremos tener conectados en la misma red WiFi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas <code>window</code>+<code>R</code> o <code>🪟</code>+<code>R</code> .</p>
 <p><img alt="Ventana ejecutar" class="img-center" src="../img/windows/ejecutar.png" /></p>
 <p>Escribimos <code>cmd</code> y le damos al botón <code>Aceptar</code>, en ese momento se abrira una ventana terminal, en donde escribiremos <code>ipconfig</code> y presionaremos <code>Enter</code>:</p>
 <p><img alt="Ventana ejecutar" class="img-center" src="../img/windows/ipconfig.png" /></p>
@@ -112,15 +112,16 @@
    Máscara de subred . . . . . . . . . . . . : 255.255.255.0
    Puerta de enlace predeterminada . . . . . : 10.10.54.1
 </code></pre>
+<p><strong>IMPORTANTE:</strong> En cada conexión a la red WiFi, <strong>la dirección IP va a cambiar</strong>. </p>
 <p>En el ejemplo anterior buscaremos el adaptador de <code>LAN inalámbrica Wi-Fi</code> y de ahí tomaremos el valor de la <code>Dirección IPv4</code> es este caso <code>192.168.1.20</code>. Estos 4 números separados por punto los necesitaremos para la conexión del dispositivo con RealVNC al URSIM. </p>
 <p>A continuación mostramos un video de conexión desde un iPad: </p>
 <p><iframe class="img-center" width="500x" height="350px" src="https://www.youtube.com/embed/Bfo220bfreo?si=OFBDKXna1Vu6ki3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
-        <a href=".." class="btn btn-neutral float-left" title="Tutorial de URSIM con Webots"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
-        <a href="../20-pick-and-place/" class="btn btn-neutral float-right" title="Entorno: Pick and Place">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Tutorial de URSIM con Webots"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../20-pick-and-place/" class="btn btn-neutral float-right" title="Entorno: Pick and Place">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -130,7 +131,7 @@
       <p>© 2025, Davinson Castaño Cano para el Semillero ARES</p>
   </div>
 
-  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando un <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
           
         </div>
@@ -140,7 +141,7 @@
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="Versiones">
+  <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
@@ -148,10 +149,10 @@
         </span>
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Anterior</a></span>
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../20-pick-and-place/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
+      <span><a href="../20-pick-and-place/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
