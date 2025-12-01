@@ -2,7 +2,7 @@
 
 A continuación listamos la limitaciones con las que nos encontraremos al usar webots con el ursim:
 
-## Sin acceso a las entradas en el URSIM
+## Entradas en el URSIM
 
 El simulador URSIM no nos permite modificar las entradas que en el sistema real recibirian información del entorno. Para superar esta limitación enviamos información desde Webots a registros dentro del URSIM. 
 
@@ -11,3 +11,5 @@ Los archivo de instalación ya tienen configurados los nombres entonces se puede
 ## Sin retorno de choque
 
 En el robot real la interfaz de control, al detectar un contacto o choque, para inmediatamente la simulación. En el simulador con URSIM no podemos enviar información del contacto y simular el _"paro de emergencias"_. 
+
+Cuando el robot se queda "enganchado" con algo, deberemos resetear el simulador. 
