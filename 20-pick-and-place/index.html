@@ -52,6 +52,8 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Entorno: Pick and Place</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#entradas-y-salidas">Entradas y Salidas</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -92,6 +94,69 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="entorno-pick-and-place">Entorno: Pick and Place</h1>
+<p>El entorno de <em>Pick and Place</em> es un entorno que nos permite iniciarnos en el mundo de los manipuladores robóticos. A continuación se presenta una imagen del entorno. </p>
+<p><img alt="Entorno de Pick and Place en Webots" class="img-center" src="../img/pickAndPlace.png" /></p>
+<p>Para abrirlo simplemente abriremos Webots y buscaremos el archivo desde Webots: </p>
+<pre><code>..\webots\worlds\pickAndPlace.wbt
+</code></pre>
+<p>Al abrir el archivo se empezará a correr la simulación. <strong>IMPORTANTE</strong> tener el contenedor de URSIM corriendo. </p>
+<h2 id="entradas-y-salidas">Entradas y Salidas</h2>
+<p>Las entradas y salidas esta configuradas ya en el archivo de instalación <code>pickAndPlace\pickAndPlace.installation</code> y son las siguientes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">I/O</th>
+<th style="text-align: center;">Registro</th>
+<th style="text-align: center;">Nombre</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">entrada</td>
+<td style="text-align: center;">GPbi[64]</td>
+<td style="text-align: center;">infeed_laser</td>
+<td style="text-align: left;">detector de objetos en la banda de entrada</td>
+</tr>
+<tr>
+<td style="text-align: center;">entrada</td>
+<td style="text-align: center;">GPbi[65]</td>
+<td style="text-align: center;">outfeed_laser</td>
+<td style="text-align: left;">detector de objetos en la banda de salida</td>
+</tr>
+<tr>
+<td style="text-align: center;">salida</td>
+<td style="text-align: center;">DO[0]</td>
+<td style="text-align: center;">infeed_on</td>
+<td style="text-align: left;">activación de banda de entrada, banda de piezas</td>
+</tr>
+<tr>
+<td style="text-align: center;">salida</td>
+<td style="text-align: center;">DO[1]</td>
+<td style="text-align: center;">outfeed_on</td>
+<td style="text-align: left;">activación de banda de salida, banda de cajas</td>
+</tr>
+<tr>
+<td style="text-align: center;">salida</td>
+<td style="text-align: center;">TO[0]</td>
+<td style="text-align: center;">gripper</td>
+<td style="text-align: left;">activación de la pinza, <strong>low</strong> para abrir, <strong>high</strong> para cerrar</td>
+</tr>
+<tr>
+<td style="text-align: center;">salida</td>
+<td style="text-align: center;">AO[0]</td>
+<td style="text-align: center;">infeed_speed</td>
+<td style="text-align: left;">control de la velocidad de la banda de entrada*</td>
+</tr>
+<tr>
+<td style="text-align: center;">salida</td>
+<td style="text-align: center;">AO[1]</td>
+<td style="text-align: center;">outfeed_speed</td>
+<td style="text-align: left;">control de la velocidad de la banda de salida*</td>
+</tr>
+</tbody>
+</table>
+<p>* puede ser controlada en voltaje 0-10V o en corriente 0-4mA.</p>
               
             </div>
           </div><footer>

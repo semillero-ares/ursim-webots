@@ -60,6 +60,16 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Problemas Comunes</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fallo-en-el-setupbat">Fallo en el setup.bat</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#instalacion-de-paquetes-de-python">Instalación de paquetes de Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creacion-de-la-red-virtual">Creación de la red virtual</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#activacion-del-contenedor">Activación del contenedor</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -92,8 +102,19 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="problemas-comunes">Problemas Comunes</h1>
-<h1 id="fallo-en-el-setupbat">Fallo en el setup.bat</h1>
+<h2 id="fallo-en-el-setupbat">Fallo en el setup.bat</h2>
 <p>Si por algun motivo falla la ejecución del <code>setup.bat</code> (este archivo está pensado para funcionar en Windows.) podras correr el simulador haciendo los pasos que debería hacer el archivo ejecutable. </p>
+<h3 id="instalacion-de-paquetes-de-python">Instalación de paquetes de Python</h3>
+<pre><code class="language-sh">python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+</code></pre>
+<h3 id="creacion-de-la-red-virtual">Creación de la red virtual</h3>
+<pre><code class="language-sh">docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
+</code></pre>
+<h3 id="activacion-del-contenedor">Activación del contenedor</h3>
+<pre><code class="language-sh">cd ursim
+docker-compose up -d
+</code></pre>
               
             </div>
           </div><footer>
