@@ -83,7 +83,7 @@ while robot.step(TIME_STEP) != -1:
     try:
         state = con.receive_buffered()
         if state is not None:
-            set_joint_positions(state.actual_q)
+            set_joint_positions(state.target_q)
             set_gripper_position(state)
             # print("Robot pose: {}".format(state.actual_q))
             pass
