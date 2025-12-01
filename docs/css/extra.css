@@ -1,0 +1,20 @@
+:root {
+  /* Primary brand color */
+  --brand-primary: #146aef;
+  --brand-primary-dark: #000086;
+}
+
+.wy-side-nav-search {
+  background-color: var(--brand-primary) !important;
+  background: -webkit-linear-gradient(top, var(--brand-primary) 0%, var(--brand-primary-dark) 100%) !important;
+  background: linear-gradient(180deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%) !important;
+}
+
+img.logo {
+  max-width: 100px;
+  height: auto;
+}
+
+p:has(.img-center) {
+  text-align: center;
+}

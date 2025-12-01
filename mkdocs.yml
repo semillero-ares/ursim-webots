@@ -1,2 +1,15 @@
-site_name: My Docs
+site_name: Tutorial de URSim con Webots
+site_description: Aprende a utilizar URSim con Webots para simular robots colaborativos de Universal
+site_author: Semillero ARES
 repo_url: https://github.com/semillero-ares/ursim-webots
+base_url: /ursim-webots
+theme:
+  name: readthedocs
+  logo: img/logo/ares.png
+  favicon: img/favicon/favicon.ico
+  include_homepage_in_sidebar: true
+  locale: es
+extra_css:
+  - css/extra.css
+markdown_extensions:
+  - attr_list

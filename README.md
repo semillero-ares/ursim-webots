@@ -21,7 +21,7 @@ git push -u origin main
 ## For mkdocs branch
 ```bash
 git init
-git checkout -b docs
+git checkout --orphan -b docs
 git add .
 git commit -m "initial docs commit"
 git remote add origin https://github.com/semillero-ares/ursim-webots.git
