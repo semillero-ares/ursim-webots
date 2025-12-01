@@ -44,29 +44,29 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Tutorial de URSIM con Webots</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#webots">Webots</a>
+    <li class="toctree-l2"><a class="reference internal" href="#configurando-el">Configurando el</a>
     </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="05-formacion-gratis/">Formaciones Gratis de UR</a>
+                <li class="toctree-l1"><a class="reference internal" href="10-vnc/">Usando RVNC</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="10-limitaciones/">Limitaciones del simulador</a>
+                <li class="toctree-l1"><a class="reference internal" href="20-pick-and-place/">Reto de Pick and Place</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="20-problemas-comunes/">Problemas Comunes</a>
+                <li class="toctree-l1"><a class="reference internal" href="50-limitaciones/">Limitaciones del simulador</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="30-pick-and-place/">Reto de Pick and Place</a>
+                <li class="toctree-l1"><a class="reference internal" href="60-problemas-comunes/">Problemas Comunes</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="50-vnc/">Usando RVNC</a>
+                <li class="toctree-l1"><a class="reference internal" href="70-formacion-gratis/">Formaciones Gratis de UR</a>
                 </li>
               </ul>
       </div>
@@ -96,23 +96,31 @@
                 <h1 id="tutorial-de-ursim-con-webots">Tutorial de URSIM con Webots</h1>
 <p>Usar el URSIM con webots tiene la gran ventaja de tener un entorno completo de estudio para aprender de manipuladores y aprender a usar la interfaz gráfica de los robots de la empresa <strong>Universal Robots</strong> la cual nos ofrece el software URSIM sin un ambiente completo de simulación, ya que esta opción esta solo disponible si le compramos las formaciones (<a href="05-formacion-gratis">aunque hay gratis</a>). Con este desarrollo del Semillero ARES, podremos tener el entorno completo aunque con <a href="10-limitaciones">limitaciones</a>.</p>
 <p>Para poder usar el simulador de Webots con URsim, debemos realizar las siguientes instalaciones en nuestro computador:</p>
-<p><img alt="webots logo" src="img/logo/webots.png" width="52.63157894736842px" />
-<img alt="python logo" src="img/logo/python.svg" width="50px" />
-<img alt="docker desktop logo" src="img/logo/docker-desktop.svg" width="50px" />
-<img alt="git logo" src="img/logo/git.svg" width="50px" /></p>
-<ul>
-<li><a href="https://www.python.org/downloads/">Python</a></li>
-<li><a href="https://cyberbotics.com/">Webots</a></li>
-<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></li>
-<li><a href="https://git-scm.com/install/windows">GIT</a></li>
-</ul>
-<h2 id="webots">Webots</h2>
-<p>Es un simulador de robots 3D que permite modelar, simular y probar robots y entornos de manera realista. Ofrece librerías de robots y dispositivos, soporte para sensores (cámaras, LIDAR, IMU, encoders), distintos motores de física, y herramientas de visualización, depuración y registro de datos. Webots permite desarrollar controladores en varios lenguajes (entre ellos Python, C/C++, Java y MATLAB) y conectarse con ROS, lo que facilita la integración con URsim. En este flujo de trabajo se usará Webots para diseñar y validar escenarios y controladores locales, y URsim (ejecutado en Docker) para emular el controlador del robot Universal Robots y verificar la compatibilidad antes de desplegar en hardware real.</p>
+<ol>
+<li>
+<p><a href="https://git-scm.com/install/windows">GIT</a>, necesario para clonar el repositorio con todos los archivos de configuración de URSIM y el simulador en Webots. </p>
+</li>
+<li>
+<p><a href="https://www.python.org/downloads/">Python</a>, lenguage de programación en el que desarrollamos los controladores del simulador Webots y la comunicación entre Webots y URSIM usando el protocolo de UR llamado RTDE. </p>
+</li>
+<li>
+<p><a href="https://cyberbotics.com/">Webots</a>, es el motor de simulaciones que nos permite simular el robot y su interacción con el entorno. </p>
+</li>
+<li>
+<p><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a>, este motor nos permite instalar y correr fácilmente URSIM. </p>
+</li>
+</ol>
+<p><img alt="git logo" class="logo img-center" src="img/logo/git.svg" />
+<img alt="python logo" class="logo img-center" src="img/logo/python.svg" />
+<img alt="webots logo" class="logo img-center" src="img/logo/webots.png" />
+<img alt="docker desktop logo" class="logo img-center" src="img/logo/docker-desktop.svg" /></p>
+<h2 id="configurando-el">Configurando el</h2>
+<p>Después de tener todos los programas anterior instalados, podremos empezar a usar URSIM con Webots. </p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
-        <a href="05-formacion-gratis/" class="btn btn-neutral float-right" title="Formaciones Gratis de UR">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="10-vnc/" class="btn btn-neutral float-right" title="Usando RVNC">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -140,7 +148,7 @@
     
     
     
-      <span><a href="05-formacion-gratis/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
+      <span><a href="10-vnc/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
     
   </span>
 </div>
@@ -160,5 +168,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-12-01 15:13:22.965514+00:00
+Build Date UTC : 2025-12-01 15:22:12.943482+00:00
 -->
