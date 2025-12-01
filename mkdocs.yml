@@ -1,8 +1,9 @@
 site_name: Tutorial de URSim con Webots
 site_description: Aprende a utilizar URSim con Webots para simular robots colaborativos de Universal
 site_author: Semillero ARES
+copyright: © 2025, Davinson Castaño Cano para el Semillero ARES
 repo_url: https://github.com/semillero-ares/ursim-webots
-base_url: /ursim-webots
+site_url: https://semillero-ares.github.io/ursim-webots/
 theme:
   name: readthedocs
   logo: img/logo/ares.png

@@ -2,7 +2,7 @@
 
 Podemos acceder a URSIM desde la interfaz web [`http://localhost:6080/vnc.html`](http://localhost:6080/vnc.html) o tambien podemos acceder a URSIM desde cualquier cliente VNC, uno de los más usados es el RealVNC el cual tiene clientes para sistemas operativos móviles como Android y iOS. 
 
-![RVNC Logo](/img/logo/rvnc.png){: class="logo img-center"}
+![RVNC Logo](img/logo/rvnc.png){: class="logo img-center"}
 
 - Enlace para la Google Play Store [aquí](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&hl=es_CO)
 - Enlace para la App Store [aquí](https://apps.apple.com/es/app/realvnc-viewer-remote-desktop/id352019548)
@@ -11,11 +11,11 @@ La versión en iOS permite la interacción con el URSIM usando las capacidades _
 
 Para conectarnos con el URSIM necesitaremos tener conectados en la misma red wifi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas `window`+`R` o `🪟`+`R` .
 
-![Ventana ejecutar](/img/windows/ejecutar.png){: class="img-center"}
+![Ventana ejecutar](img/windows/ejecutar.png){: class="img-center"}
 
 Escribimos `cmd` y le damos al botón `Aceptar`, en ese momento se abrira una ventana terminal, en donde escribiremos `ipconfig` y presionaremos `Enter`:
 
-![Ventana ejecutar](/img/windows/ipconfig.png){: class="img-center"}
+![Ventana ejecutar](img/windows/ipconfig.png){: class="img-center"}
 
 Buscaras en el terminal algo similar a lo que mostramos a continuación:
 

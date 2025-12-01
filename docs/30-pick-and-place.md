@@ -1,1 +1,0 @@
-# Reto de Pick and Place
