@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Semillero ARES" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Usando RVNC - Tutorial de URSim con Webots</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Usando RVNC";
+        var mkdocs_page_input_path = "50-vnc.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../img/logo/ares.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" title="Escriba el término de búsqueda aquí" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegación">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Uso de Webots con URsim</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-limitaciones/">Limitaciones del simulador</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20-problemas-comunes/">Problemas Comunes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../30-pick-and-place/">Reto de Pick and Place</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Usando RVNC</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Menú de navegación en móvil">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Tutorial de URSim con Webots</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Documentos"></a></li>
+      <li class="breadcrumb-item active">Usando RVNC</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/semillero-ares/ursim-webots/edit/master/docs/50-vnc.md" class="icon icon-github"> Editar en GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="usando-rvnc">Usando RVNC</h1>
+<p>Podemos acceder a URSIM desde la interfaz web <a href="http://localhost:6080/vnc.html"><code>http://localhost:6080/vnc.html</code></a> o tambien podemos acceder a URSIM desde cualquier cliente VNC, uno de los más usados es el RealVNC el cual tiene clientes para sistemas operativos móviles como Android y iOS. </p>
+<p><img alt="RVNC Logo" class="logo img-center" src="/img/logo/rvnc.png" /></p>
+<ul>
+<li>Enlace para la Google Play Store <a href="https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&amp;hl=es_CO">aquí</a></li>
+<li>Enlace para la App Store <a href="https://apps.apple.com/es/app/realvnc-viewer-remote-desktop/id352019548">aquí</a></li>
+</ul>
+<p>La versión en iOS permite la interacción con el URSIM usando las capacidades <em>touch</em> del iPhone o del iPad. La versión de Android está limitada a interacción tipo <em>mouse</em>. </p>
+<p>Para conectarnos con el URSIM necesitaremos tener conectados en la misma red wifi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas <code>window</code>+<code>R</code> o <code>🪟</code>+<code>R</code> .</p>
+<p><img alt="Ventana ejecutar" class="img-center" src="/img/windows/ejecutar.png" /></p>
+<p>Escribimos <code>cmd</code> y le damos al botón <code>Aceptar</code>, en ese momento se abrira una ventana terminal, en donde escribiremos <code>ipconfig</code> y presionaremos <code>Enter</code>:</p>
+<p><img alt="Ventana ejecutar" class="img-center" src="/img/windows/ipconfig.png" /></p>
+<p>Buscaras en el terminal algo similar a lo que mostramos a continuación:</p>
+<pre><code class="language-txt">Adaptador de LAN inalámbrica Wi-Fi:
+
+   Sufijo DNS específico para la conexión. . : wifi
+   Vínculo: dirección IPv6 local. . . : fe80::c848:ffa2:aeb9:e1d%24
+   Dirección IPv4. . . . . . . . . . . . . . : 192.168.1.20
+   Máscara de subred . . . . . . . . . . . . : 255.255.255.0
+   Puerta de enlace predeterminada . . . . . : 10.10.54.1
+</code></pre>
+<p>En el ejemplo anterior buscaremos el adaptador de <code>LAN inalámbrica Wi-Fi</code> y de ahí tomaremos el valor de la <code>Dirección IPv4</code> es este caso <code>192.168.1.20</code>. Estos 4 números separados por punto los necesitaremos para la conexión del dispositivo con RealVNC al URSIM. </p>
+<p>A continuación mostramos un video de conexión desde un iPad: </p>
+<p><iframe class="img-center" width="500x" height="350px" src="https://www.youtube.com/embed/Bfo220bfreo?si=OFBDKXna1Vu6ki3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
+        <a href="../30-pick-and-place/" class="btn btn-neutral float-left" title="Reto de Pick and Place"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando un <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versiones">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/semillero-ares/ursim-webots" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../30-pick-and-place/" style="color: #fcfcfc">&laquo; Anterior</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
