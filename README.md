@@ -2,9 +2,10 @@
 
 Pasos para configurar el simulador Webots y el ambiente URsim, para controlar el robot de webots desde el URsim. 
 
-- Clona el repositorio
-- Ejecuta `setup.bat` una vez
-- Inicia el contenedor del URSIM desde Docker Desktop
+- Clona este repositorio.
+- Abre el Docker Desktop.
+- Ejecuta `setup.bat` una vez.
+- Inicia el contenedor del URSIM desde Docker Desktop de ahora en adelante. 
 
 Haz clic [aquí](https://semillero-ares.github.io/ursim-webots/) para ver el tutorial detallado 
 
