@@ -228,8 +228,15 @@ def setup_rtde_connection():
         sys.exit()
 
 
-# simulator.setLabel(0, "pickAndPlace.wbt", 0.0,
-#                    0.95, 0.10, 0xffffff, 0, 'Arial')
+def get_last_received_state():
+    """Helper function to retrieve the most recent state received from the controller."""
+    last_state = None
+    state = con.receive_buffered()
+    while state is not None:
+        last_state = state
+        state = con.receive_buffered()  # Keep reading until no more states are available
+    return last_state
+
 
 while simulator.step(TIME_STEP) != -1:
 
@@ -255,7 +262,8 @@ while simulator.step(TIME_STEP) != -1:
             inputs.input_bit_register_65 = int(laser_outfeed_value < 100.0)
             con.send(inputs)
 
-            state = con.receive_buffered()
+            state = get_last_received_state()
+
             if state is not None:
                 set_conveyors_speed(state)
                 pass

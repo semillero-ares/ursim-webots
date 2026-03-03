@@ -6,7 +6,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Rubber.proto"
 
 WorldInfo {
-  basicTimeStep 5
+  basicTimeStep 10
   contactProperties [
     ContactProperties {
       material1 "ROBOTIQ gripper pad"
@@ -18,8 +18,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.2513591635175337 -0.10027885209737887 0.9626851628324797 3.8749835032612054
-  position 3.54799455423343 3.5448907360939033 3.9927021132609926
+  orientation -0.2629644405055323 -0.11455779893808843 0.9579802783628026 3.9323233216889895
+  position 3.275448636857743 4.528500827329762 4.04395666013046
 }
 DirectionalLight {
   direction 0 -1 0
@@ -54,17 +54,67 @@ DEF SimFrame Robot {
             size 0.06 0.06 0.12
           }
         }
-        DEF BOX Shape {
-          appearance DEF ColorBlue PBRAppearance {
-            baseColor 0.490196 0.180392 0
-            roughness 1
-            metalness 0
-          }
-          geometry Mesh {
-            url [
-              "../meshes/box.stl"
-            ]
-          }
+        DEF BOX Group {
+          children [
+            Pose {
+              children [
+                Shape {
+                  appearance DEF ColorBrown PBRAppearance {
+                    baseColor 0.490196 0.180392 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.25 0.3 0.003
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0.1235 0 0.1
+              children [
+                Shape {
+                  appearance USE ColorBrown
+                  geometry Box {
+                    size 0.003 0.3 0.2
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation -0.1235 0 0.1
+              children [
+                Shape {
+                  appearance USE ColorBrown
+                  geometry Box {
+                    size 0.003 0.3 0.2
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0 0.1485 0.1
+              children [
+                Shape {
+                  appearance USE ColorBrown
+                  geometry Box {
+                    size 0.25 0.003 0.2
+                  }
+                }
+              ]
+            }
+            Pose {
+              translation 0 -0.1485 0.1
+              children [
+                Shape {
+                  appearance USE ColorBrown
+                  geometry Box {
+                    size 0.25 0.003 0.2
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

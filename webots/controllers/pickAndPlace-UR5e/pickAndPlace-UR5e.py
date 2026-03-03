@@ -102,6 +102,16 @@ def setup_rtde_connection():
         sys.exit()
 
 
+def get_last_received_state():
+    """Helper function to retrieve the most recent state received from the controller."""
+    last_state = None
+    state = con.receive_buffered()
+    while state is not None:
+        last_state = state
+        state = con.receive_buffered()  # Keep reading until no more states are available
+    return last_state
+
+
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 set_joint_positions([0, -pi/2, -pi/2, -pi/2, 0, 0])
@@ -114,7 +124,7 @@ while robot.step(TIME_STEP) != -1:
             setup_rtde_connection()
     else:
         try:
-            state = con.receive_buffered()
+            state = get_last_received_state()
             if state is not None:
                 set_joint_positions(state.target_q)
                 set_gripper_position(state)
