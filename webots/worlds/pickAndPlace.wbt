@@ -11,15 +11,16 @@ WorldInfo {
     ContactProperties {
       material1 "ROBOTIQ gripper pad"
       coulombFriction [
-        10
+        40
       ]
-      rollingFriction 0.1 0.1 0.1
+      frictionRotation 1 1
+      rollingFriction 0.2 0.2 0.2
     }
   ]
 }
 Viewpoint {
-  orientation -0.2629644405055323 -0.11455779893808843 0.9579802783628026 3.9323233216889895
-  position 3.275448636857743 4.528500827329762 4.04395666013046
+  orientation -0.2288036256467196 -0.13126176425733813 0.9645824226757229 4.152456914663547
+  position 0.9942466518648241 1.9066364302718288 1.8003791007105905
 }
 DirectionalLight {
   direction 0 -1 0
