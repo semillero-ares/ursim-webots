@@ -1,2 +1,3 @@
 *.UR5
+venv/
 *_solution/
