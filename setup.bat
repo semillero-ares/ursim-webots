@@ -12,7 +12,7 @@ if errorlevel 1 (
 docker network inspect dockernet
 
 REM Docker compose up
-cd ursim
+cd pick-and-place-UR5e
 docker-compose up -d
 
 REM Pause to view any messages
