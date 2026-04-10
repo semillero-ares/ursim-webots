@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Semillero ARES" /><link rel="canonical" href="https://semillero-ares.github.io/ursim-webots/10-vnc/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Semillero ARES" /><link rel="canonical" href="https://semillero-ares.github.io/ursim-webots/04-windows/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Usando RVNC - Tutorial de URSim con Webots</title>
+    <title>Inicio rápido con Windows - Tutorial de URSim con Webots</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Usando RVNC";
-        var mkdocs_page_input_path = "10-vnc.md";
-        var mkdocs_page_url = "/ursim-webots/10-vnc/";
+        var mkdocs_page_name = "Inicio r\u00e1pido con Windows";
+        var mkdocs_page_input_path = "04-windows.md";
+        var mkdocs_page_url = "/ursim-webots/04-windows/";
       </script>
     
     <!--[if lt IE 9]>
@@ -45,8 +45,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Tutorial de URSIM con Webots</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../04-windows/">Inicio rápido con Windows</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Inicio rápido con Windows</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -57,10 +59,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../06-ubuntu/">Inicio en ubuntu</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Usando RVNC</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-vnc/">Usando RVNC</a>
                 </li>
               </ul>
               <ul>
@@ -93,9 +93,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Documentos"></a></li>
-      <li class="breadcrumb-item active">Usando RVNC</li>
+      <li class="breadcrumb-item active">Inicio rápido con Windows</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/semillero-ares/ursim-webots/edit/master/docs/10-vnc.md" class="icon icon-github"> Editar en GitHub</a>
+          <a href="https://github.com/semillero-ares/ursim-webots/edit/master/docs/04-windows.md" class="icon icon-github"> Editar en GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -103,37 +103,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="usando-rvnc">Usando RVNC</h1>
-<p>Podemos acceder a URSIM desde la interfaz web <a href="http://localhost:6080/vnc.html"><code>http://localhost:6080/vnc.html</code></a> o tambien podemos acceder a URSIM desde cualquier cliente VNC, uno de los más usados es el RealVNC el cual tiene clientes para sistemas operativos móviles como Android y iOS. </p>
-<p><img alt="RVNC Logo" class="logo img-center" src="../img/logo/rvnc.png" /></p>
-<ul>
-<li>Enlace para la Google Play Store <a href="https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&amp;hl=es_CO">aquí</a></li>
-<li>Enlace para la App Store <a href="https://apps.apple.com/es/app/realvnc-viewer-remote-desktop/id352019548">aquí</a></li>
-</ul>
-<p>La versión en iOS permite la interacción con el URSIM usando las capacidades <em>touch</em> del iPhone o del iPad. La versión de Android está limitada a interacción tipo <em>mouse</em>. </p>
-<p>Para conectarnos con el URSIM necesitaremos tener conectados en la misma red WiFi, el PC donde corre URSIM y el dispositivo con RealVNC. Luego de esto necesitaremos conocer la IP del PC en dicha red, para conseguir la presionaremos en el teclado las teclas <code>window</code>+<code>R</code> o <code>🪟</code>+<code>R</code> .</p>
-<p><img alt="Ventana ejecutar" class="img-center" src="../img/windows/ejecutar.png" /></p>
-<p>Escribimos <code>cmd</code> y le damos al botón <code>Aceptar</code>, en ese momento se abrira una ventana terminal, en donde escribiremos <code>ipconfig</code> y presionaremos <code>Enter</code>:</p>
-<p><img alt="Ventana ejecutar" class="img-center" src="../img/windows/ipconfig.png" /></p>
-<p>Buscaras en el terminal algo similar a lo que mostramos a continuación:</p>
-<pre><code class="language-txt">Adaptador de LAN inalámbrica Wi-Fi:
-
-   Sufijo DNS específico para la conexión. . : wifi
-   Vínculo: dirección IPv6 local. . . : fe80::c848:ffa2:aeb9:e1d%24
-   Dirección IPv4. . . . . . . . . . . . . . : 192.168.1.20
-   Máscara de subred . . . . . . . . . . . . : 255.255.255.0
-   Puerta de enlace predeterminada . . . . . : 10.10.54.1
+                <h1 id="inicio-rapido-con-windows">Inicio rápido con Windows</h1>
+<p>Después de tener todos los programas anterior instalados, podremos empezar a usar URSIM con Webots. Lo primero que deberemos hacer será clonar el repositorio usando este comando en un terminal, pero antes de eso crearemos una carpeta en el PC donde queramos que los archivos estén. En nuestro caso usaremos <code>C:\ursim-webots</code> como ilustración.</p>
+<p>Estando en la carpeta vamos a abrir un terminal. Hacemos clic derecho en el espacio vacío en la carpeta y en el menú desplegable escogemos <code>Abrir en Terminal</code>.</p>
+<p><img alt="Abrir en Terminal" class="img-center" src="../img/windows/abrir-terminal.png" title="Abrir en Terminal" /></p>
+<p>Estando en el terminal vamos a ejecutar el siguiente comando:</p>
+<pre><code>git clone https://github.com/semillero-ares/ursim-webots.git .
 </code></pre>
-<p><strong>IMPORTANTE:</strong> En cada conexión a la red WiFi, <strong>la dirección IP va a cambiar</strong>. </p>
-<p>En el ejemplo anterior buscaremos el adaptador de <code>LAN inalámbrica Wi-Fi</code> y de ahí tomaremos el valor de la <code>Dirección IPv4</code> es este caso <code>192.168.1.20</code>. Estos 4 números separados por punto los necesitaremos para la conexión del dispositivo con RealVNC al URSIM. </p>
-<p>A continuación mostramos un video de conexión desde un iPad: </p>
-<p><iframe class="img-center" width="500x" height="350px" src="https://www.youtube.com/embed/Bfo220bfreo?si=OFBDKXna1Vu6ki3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Después de ejecutar el comando la carpeta debera tener alguno archivos, entre ellos uno llamado <code>setup.bat</code>. En el terminal vamos a ejecutar este archivo:</p>
+<p><strong>IMPORTANTE:</strong> Tener abierto el Docker Desktop, para que se haga el setup correctamente. </p>
+<pre><code>.\setup.bat
+</code></pre>
+<p>También se puede ejecutar el setup, haciendo doble clic en el archivo <code>setup.bat</code> directamente. </p>
+<p>Si todo salió bien, deberemos tener un mensaje similar a este:</p>
+<pre><code>[+] Running 1/1
+ ✔ Container ursim Started
+Presione una tecla para continuar . . .
+</code></pre>
+<p>Y podremos acceder a URSIM a traves del navegador en este enlace <a href="http://localhost:6080/vnc.html"><code>http://localhost:6080/vnc.html</code></a>. Si hubo algún problema revisar la sección de solución de <a href="../60-problemas-comunes/">problemas comunes</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
-        <a href="../06-ubuntu/" class="btn btn-neutral float-left" title="Inicio en ubuntu"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
-        <a href="../20-pick-and-place/" class="btn btn-neutral float-right" title="Entorno: Pick and Place">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+        <a href=".." class="btn btn-neutral float-left" title="Tutorial de URSIM con Webots"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href="../05-macos/" class="btn btn-neutral float-right" title="Inicio en macOS">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -161,10 +154,10 @@
         </span>
     
     
-      <span><a href="../06-ubuntu/" style="color: #fcfcfc">&laquo; Anterior</a></span>
+      <span><a href=".." style="color: #fcfcfc">&laquo; Anterior</a></span>
     
     
-      <span><a href="../20-pick-and-place/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
+      <span><a href="../05-macos/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
     
   </span>
 </div>

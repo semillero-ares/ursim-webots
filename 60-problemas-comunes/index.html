@@ -46,11 +46,15 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../05-macos/">Empezando en macOS</a>
+                <li class="toctree-l1"><a class="reference internal" href="../04-windows/">Inicio rápido con Windows</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../06-ubuntu/">Empezando en ubuntu</a>
+                <li class="toctree-l1"><a class="reference internal" href="../05-macos/">Inicio en macOS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-ubuntu/">Inicio en ubuntu</a>
                 </li>
               </ul>
               <ul>
@@ -117,10 +121,10 @@
 python -m pip install -r requirements.txt
 </code></pre>
 <h3 id="creacion-de-la-red-virtual">Creación de la red virtual</h3>
-<pre><code class="language-sh">docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
+<pre><code class="language-sh">docker network create -d bridge --subnet 172.19.0.0/24 --gateway 172.19.0.1 dockernet
 </code></pre>
 <h3 id="activacion-del-contenedor">Activación del contenedor</h3>
-<pre><code class="language-sh">cd ursim
+<pre><code class="language-sh">cd pick-and-place-UR5e
 docker-compose up -d
 </code></pre>
               

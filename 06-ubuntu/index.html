@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Semillero ARES" /><link rel="canonical" href="https://semillero-ares.github.io/ursim-webots/06-ubuntu/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Empezando en ubuntu - Tutorial de URSim con Webots</title>
+    <title>Inicio en ubuntu - Tutorial de URSim con Webots</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Empezando en ubuntu";
+        var mkdocs_page_name = "Inicio en ubuntu";
         var mkdocs_page_input_path = "06-ubuntu.md";
         var mkdocs_page_url = "/ursim-webots/06-ubuntu/";
       </script>
@@ -46,11 +46,15 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../05-macos/">Empezando en macOS</a>
+                <li class="toctree-l1"><a class="reference internal" href="../04-windows/">Inicio rápido con Windows</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-macos/">Inicio en macOS</a>
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Empezando en ubuntu</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Inicio en ubuntu</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#encontrar-la-ip-del-mac-para-realvnc">Encontrar la IP del Mac para RealVNC</a>
     </li>
@@ -93,7 +97,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Documentos"></a></li>
-      <li class="breadcrumb-item active">Empezando en ubuntu</li>
+      <li class="breadcrumb-item active">Inicio en ubuntu</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/semillero-ares/ursim-webots/edit/master/docs/06-ubuntu.md" class="icon icon-github"> Editar en GitHub</a>
     </li>
@@ -103,7 +107,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="empezando-en-ubuntu">Empezando en ubuntu</h1>
+                <h1 id="inicio-en-ubuntu">Inicio en ubuntu</h1>
 <p>Esta guía cubre los pasos para usar URSIM con Webots en <strong>Ubuntu</strong>. Los pasos difieren de la <a href="../">guía principal</a> que está orientada a Windows.</p>
 <p>Deberemos abrir un terminal y escribir lo siguiente:</p>
 <pre><code class="language-bash">curl -fsSL https://semillero-ares.github.io/ursim-webots/install.sh | bash
@@ -120,11 +124,11 @@
 <hr />
 <h2 id="detener-e-iniciar-el-simulador">Detener e iniciar el simulador</h2>
 <p>Cuando termines de trabajar, puedes detener el contenedor de URSIM con:</p>
-<pre><code class="language-sh">cd ~/ursim-webots/ursim
+<pre><code class="language-sh">cd ~/ursim-webots/pick-and-place-UR5e
 docker compose down
 </code></pre>
 <p>Cuando quieras volver a trabajar, puedes iniciar el contenedor de URSIM con:</p>
-<pre><code class="language-sh">cd ~/ursim-webots/ursim
+<pre><code class="language-sh">cd ~/ursim-webots/pick-and-place-UR5e
 docker compose up -d
 </code></pre>
 <p>Accede al VNC desde el navegador aquí <a href="http://localhost:6080/vnc.html"><code>http://localhost:6080/vnc.html</code></a></p>
@@ -132,7 +136,7 @@ docker compose up -d
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
-        <a href="../05-macos/" class="btn btn-neutral float-left" title="Empezando en macOS"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href="../05-macos/" class="btn btn-neutral float-left" title="Inicio en macOS"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
         <a href="../10-vnc/" class="btn btn-neutral float-right" title="Usando RVNC">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
