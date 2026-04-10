@@ -1,3 +1,4 @@
 *.UR5
+*.UR10
 venv/
 *Solution/
