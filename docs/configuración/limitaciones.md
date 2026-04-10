@@ -1,3 +1,6 @@
+---
+weight: 50
+---
 # Limitaciones del simulador
 
 A continuación listamos la limitaciones con las que nos encontraremos al usar webots con el ursim:

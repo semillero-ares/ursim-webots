@@ -1,3 +1,6 @@
+---
+weight: 12
+---
 # Inicio en ubuntu
 
 Esta guía cubre los pasos para usar URSIM con Webots en **Ubuntu**. Los pasos difieren de la [guía principal](index.md) que está orientada a Windows.

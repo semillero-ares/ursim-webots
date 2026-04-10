@@ -1,7 +1,7 @@
 Para crear mkdocs debemos tener instalado mkdocs
 
 ```
-pip install mkdocs
+pip install mkdocs mkdocs-nav-weight
 ```
 
 ```
@@ -31,4 +31,12 @@ git push -u origin docs
 ## For gh-pages
 ```
 mkdocs gh-deploy
+```
+
+## For local-dev
+
+Activación de virtualenv
+
+```
+C:\virtualenv\mkdocs\Scripts\activate.ps1
 ```

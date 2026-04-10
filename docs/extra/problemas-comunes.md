@@ -1,3 +1,6 @@
+---
+weight: 60
+---
 # Problemas Comunes
 
 ## Fallo en el setup.bat

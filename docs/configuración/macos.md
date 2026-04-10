@@ -1,3 +1,6 @@
+---
+weight: 11
+---
 # Inicio en macOS
 
 Esta guía cubre los pasos para usar URSIM con Webots en **macOS**. Los pasos difieren de la [guía principal](index.md) que está orientada a Windows.

@@ -1,3 +1,6 @@
+---
+weight: 70
+---
 # Formaciones Gratis de UR
 
 Universal Robots ofrece formaciones gratuitas a traves de su sitio web, podrás consultar todas las formaciones [aquí](https://academy.universal-robots.com/es/formacion-en-linea-gratuita/).

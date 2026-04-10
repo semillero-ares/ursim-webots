@@ -1,8 +1,11 @@
-# Entorno: Pick and Place
+---
+weight: 100
+---
+# Pick and Place
 
 El entorno de _Pick and Place_ es un entorno que nos permite iniciarnos en el mundo de los manipuladores robóticos. A continuación se presenta una imagen del entorno. 
 
-![Entorno de Pick and Place en Webots](img/pickAndPlace.png){: class="img-center"}
+![Entorno de Pick and Place en Webots](pick-and-place-ur5e.png){: class="img-center"}
 
 Para abrirlo simplemente abriremos Webots y buscaremos el archivo desde Webots: 
 

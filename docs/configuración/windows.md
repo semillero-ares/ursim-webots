@@ -1,3 +1,6 @@
+---
+weight: 10
+---
 # Inicio rápido con Windows
 
 Después de tener todos los programas anterior instalados, podremos empezar a usar URSIM con Webots. Lo primero que deberemos hacer será clonar el repositorio usando este comando en un terminal, pero antes de eso crearemos una carpeta en el PC donde queramos que los archivos estén. En nuestro caso usaremos `C:\ursim-webots` como ilustración.

@@ -1,3 +1,6 @@
+---
+weight: 13
+---
 # Usando RVNC
 
 Podemos acceder a URSIM desde la interfaz web [`http://localhost:6080/vnc.html`](http://localhost:6080/vnc.html) o tambien podemos acceder a URSIM desde cualquier cliente VNC, uno de los más usados es el RealVNC el cual tiene clientes para sistemas operativos móviles como Android y iOS. 
