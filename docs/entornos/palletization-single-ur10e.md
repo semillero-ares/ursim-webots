@@ -28,6 +28,12 @@ Las entradas y salidas esta configuradas ya en el archivo de instalación `simul
 
 \* puede ser controlada en voltaje 0-10V o en corriente 0-4mA.
 
+## Personalización
+
+Se puede cambiar el tamaño de la caja siguiendo el árbol de la escena:
+
+![Entorno de palletization-single-ur10e en Webots](./../img/entornos/change_box_size.png){: class="img-center"}
+
 ## Pasos para usar este simulador
 
 1. Abrir un terminal en la carpeta del proyecto `palletization-single-UR10e`.
