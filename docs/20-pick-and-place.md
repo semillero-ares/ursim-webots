@@ -7,7 +7,7 @@ El entorno de _Pick and Place_ es un entorno que nos permite iniciarnos en el mu
 Para abrirlo simplemente abriremos Webots y buscaremos el archivo desde Webots: 
 
 ```
-..\webots\worlds\pickAndPlace.wbt
+..\pick-and-place-UR5e\worlds\simulation.wbt
 ```
 
 Al abrir el archivo se empezará a correr la simulación. **IMPORTANTE** tener el contenedor de URSIM corriendo. 

@@ -13,12 +13,12 @@ python -m pip install -r requirements.txt
 ### Creación de la red virtual
 
 ```sh
-docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 dockernet
+docker network create -d bridge --subnet 172.19.0.0/24 --gateway 172.19.0.1 dockernet
 ```
 
 ### Activación del contenedor
 
 ```sh
-cd ursim
+cd pick-and-place-UR5e
 docker-compose up -d
 ```

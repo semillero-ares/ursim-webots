@@ -1,4 +1,4 @@
-# Empezando en ubuntu
+# Inicio en ubuntu
 
 Esta guía cubre los pasos para usar URSIM con Webots en **Ubuntu**. Los pasos difieren de la [guía principal](index.md) que está orientada a Windows.
 
@@ -29,14 +29,14 @@ ip a
 Cuando termines de trabajar, puedes detener el contenedor de URSIM con:
 
 ```sh
-cd ~/ursim-webots/ursim
+cd ~/ursim-webots/pick-and-place-UR5e
 docker compose down
 ```
 
 Cuando quieras volver a trabajar, puedes iniciar el contenedor de URSIM con:
 
 ```sh
-cd ~/ursim-webots/ursim
+cd ~/ursim-webots/pick-and-place-UR5e
 docker compose up -d
 ```
 

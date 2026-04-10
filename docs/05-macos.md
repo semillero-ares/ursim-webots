@@ -1,4 +1,4 @@
-# Empezando en macOS
+# Inicio en macOS
 
 Esta guía cubre los pasos para usar URSIM con Webots en **macOS**. Los pasos difieren de la [guía principal](index.md) que está orientada a Windows.
 
@@ -98,7 +98,7 @@ docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 do
 **3. Iniciar el contenedor de URSIM:**
 
 ```sh
-cd ursim
+cd pick-and-place-UR5e
 docker compose up -d
 ```
 
