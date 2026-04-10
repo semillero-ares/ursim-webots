@@ -1,6 +1,6 @@
 # Tutorial de URSIM con Webots
 
-Usar el URSIM con webots tiene la gran ventaja de tener un entorno completo de estudio para aprender de manipuladores y aprender a usar la interfaz gráfica de los robots de la empresa **Universal Robots** la cual nos ofrece el software URSIM sin un ambiente completo de simulación, ya que esta opción esta solo disponible si le compramos las formaciones ([aunque hay gratis](70-formacion-gratis.md)). Con este desarrollo del Semillero ARES, podremos tener el entorno completo aunque con [limitaciones](50-limitaciones.md).
+Usar el URSIM con webots tiene la gran ventaja de tener un entorno completo de estudio para aprender de manipuladores y aprender a usar la interfaz gráfica de los robots de la empresa **Universal Robots** la cual nos ofrece el software URSIM sin un ambiente completo de simulación, ya que esta opción esta solo disponible si le compramos las formaciones ([aunque hay gratis](extra/formacion-gratis.md)). Con este desarrollo del Semillero ARES, podremos tener el entorno completo aunque con [limitaciones](extra/limitaciones.md).
 
 Para poder usar el simulador de Webots con URsim, debemos realizar las siguientes instalaciones en nuestro computador:
 

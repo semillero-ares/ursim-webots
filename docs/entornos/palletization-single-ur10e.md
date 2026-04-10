@@ -31,6 +31,9 @@ Las entradas y salidas esta configuradas ya en el archivo de instalación `simul
 ## Pasos para usar este simulador
 
 1. Abrir un terminal en la carpeta del proyecto `palletization-single-UR10e`.
+
+    ![Abrir en Terminal](../img/windows/abrir-terminal.png){: class="img-center" title="Abrir en Terminal"}
+
 2. En dicho terminal correr el comando `docker compose up -d` (En _Windows_ debemos tener docker desktop corriendo).
 3. Navegar a la url [http://localhost:6080/vnc.html](http://localhost:6080/vnc.html)
 4. Abrir el simulador `worlds/simulation.wbt` y correr la simulación.

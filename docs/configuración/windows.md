@@ -7,7 +7,7 @@ Después de tener todos los programas anterior instalados, podremos empezar a us
 
 Estando en la carpeta vamos a abrir un terminal. Hacemos clic derecho en el espacio vacío en la carpeta y en el menú desplegable escogemos `Abrir en Terminal`.
 
-![Abrir en Terminal](img/windows/abrir-terminal.png){: class="img-center" title="Abrir en Terminal"}
+![Abrir en Terminal](../img/windows/abrir-terminal.png){: class="img-center" title="Abrir en Terminal"}
 
 Estando en el terminal vamos a ejecutar el siguiente comando:
 
