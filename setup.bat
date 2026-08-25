@@ -1,19 +1,27 @@
 @echo off
-REM Setup script for the project
-REM Update pip and install required packages
+
+:: Try running python --version silently
+python --version >nul 2>&1
+
+:: Check the exit code of the previous command (0 = success)
+if %errorlevel% equ 0 (
+    echo [OK] Python is installed and configured in your PATH.
+    python --version
+) else (
+    echo [WARNING] Python was not found in your system PATH!
+    echo Please install Python or add its installation folder to your PATH environment variable.
+    pause
+)
+
+:: Update pip and install required packages
+
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
-REM Create the docker network if it doesn't exist
-docker network inspect dockernet >nul 2>&1
-if errorlevel 1 (
-    docker network create -d bridge --subnet 172.19.0.0/24 --gateway 172.19.0.1 dockernet
-)
-docker network inspect dockernet
-
-REM Docker compose up
+:: Docker compose up
 cd pick-and-place-UR5e
-docker-compose up -d
+:: Try docker compose, catch with docker-compose
+docker compose up -d || docker-compose up -d
 
-REM Pause to view any messages
+:: Pause to view any messages
 pause
