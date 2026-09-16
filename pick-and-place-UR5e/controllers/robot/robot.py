@@ -47,7 +47,7 @@ gripper.setPosition(0.0)  # Set to infinite position control
 def set_gripper_position(state):
     """Set the position of the gripper."""
     global gripper
-    position = int(format(state.actual_digital_output_bits, '#020b')[3])
+    position = (state.actual_digital_output_bits >> 16) & 1
     gripper.setPosition(0.8*position)
 
 
@@ -116,7 +116,7 @@ def get_last_received_state():
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
-set_joint_positions([0, -pi/2, -pi/2, -pi/2, 0, 0])
+set_joint_positions([-1.6007, -1.7271, -2.2030, -0.8080, 1.5951, -0.0310])
 state = None
 while robot.step(TIME_STEP) != -1:
     # RTDE Data Synchronization
