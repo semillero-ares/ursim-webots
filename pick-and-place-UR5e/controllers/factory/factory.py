@@ -206,7 +206,7 @@ def setup_rtde_connection():
             con.connect()
             connected = True
             print(f"[{stem}]\tConnection established with URSIM.")
-            simulator.setLabel(1, "Running", 0.0,
+            simulator.setLabel(1, "Connected", 0.0,
                                0.0, 0.12, 0xffffff, 0, 'Arial')
         except:
             print(f"[{stem}]\tConnection failed, retrying...")
