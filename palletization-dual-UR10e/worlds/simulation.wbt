@@ -3,6 +3,7 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Rubber.proto"
 EXTERNPROTO "../protos/local_UR10e.proto"
+EXTERNPROTO "../protos/scaled_UR10e.proto"
 
 WorldInfo {
   basicTimeStep 10
@@ -18,8 +19,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.14130032799664774 -0.9046165174956089 0.4021233313078919 5.542209787422855
-  position -3.1855421943891136 1.101079139504022 3.4666783081995534
+  orientation 0.03973856950684002 -0.9916300965009004 -0.12284379433721969 5.652445988119717
+  position -3.2202748456089156 0.42082398716515107 3.27361847404824
 }
 DirectionalLight {
   direction 0 -1 0
@@ -123,9 +124,10 @@ DEF SimFrame Robot {
       name "R1"
       controller "robot_1"
     }
-    local_UR10e {
+    scaled_UR10e {
       translation 0 1.1 0.72
       name "R2"
+      scale 1.53
       controller "robot_2"
     }
     DEF RobotStand Solid {
